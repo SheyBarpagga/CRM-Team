@@ -8,6 +8,7 @@ namespace CRM_Team.Models
         [Key]
         public int TicketId { get; set; }
 
+        // Ticket submitter can be either staff or renter
         [Required]
         public int RequestorId { get; set; }
 
@@ -15,7 +16,7 @@ namespace CRM_Team.Models
         public int RequesteeId { get; set; }
 
         [Required]
-        public string TicketStatus {get; set; }
+        public bool? TicketStatus {get; set; }
 
         [Required]
         [DataType(DataType.Date)]

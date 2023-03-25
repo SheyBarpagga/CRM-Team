@@ -17,6 +17,9 @@ namespace CRM_Team.Models
         [Required]
         public double BalancePaid { get; set;}
 
+        // Services optional?
+        [Required]
+        public bool hasServiceCharge { get; set; }
         public int? ServiceId { get; set; }
 
         public double? ServiceCost { get; set; }
