@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CRM_Team
 build_property.RootNamespace = CRM_Team
-build_property.ProjectDir = C:\Users\16045\source\repos\CRM-Team\CRM-Team\
+build_property.ProjectDir = C:\Users\Stan Hung\School\2023\COMP4945\CRMProject\CRM-Team\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\16045\source\repos\CRM-Team\CRM-Team
+build_property.MSBuildProjectDirectory = C:\Users\Stan Hung\School\2023\COMP4945\CRMProject\CRM-Team
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/Home/Index.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/Home/Privacy.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/Shared/Error.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/_ViewImports.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/_ViewStart.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/16045/source/repos/CRM-Team/CRM-Team/Views/Shared/_Layout.cshtml]
+[C:/Users/Stan Hung/School/2023/COMP4945/CRMProject/CRM-Team/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j5p2euw36q

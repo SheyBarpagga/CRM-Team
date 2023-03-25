@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\16045\\.nuget\\packages\\": {}
+    "C:\\Users\\Stan Hung\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\16045\\source\\repos\\CRM-Team\\CRM-Team\\CRM-Team.csproj",
+      "projectUniqueName": "C:\\Users\\Stan Hung\\School\\2023\\COMP4945\\CRMProject\\CRM-Team\\CRM-Team.csproj",
       "projectName": "CRM-Team",
-      "projectPath": "C:\\Users\\16045\\source\\repos\\CRM-Team\\CRM-Team\\CRM-Team.csproj",
-      "packagesPath": "C:\\Users\\16045\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\16045\\source\\repos\\CRM-Team\\CRM-Team\\obj\\",
+      "projectPath": "C:\\Users\\Stan Hung\\School\\2023\\COMP4945\\CRMProject\\CRM-Team\\CRM-Team.csproj",
+      "packagesPath": "C:\\Users\\Stan Hung\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stan Hung\\School\\2023\\COMP4945\\CRMProject\\CRM-Team\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\16045\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Stan Hung\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
