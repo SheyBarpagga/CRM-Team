@@ -1,0 +1,122 @@
+﻿@model CRM4.Models.Applicant
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Applicant</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactingNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ContactingNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SharingInfo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SharingInfo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Income)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Income)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Employer)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Employer)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssetType.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssetType.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssetType1.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssetType1.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssetType2.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssetType2.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssetType3.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssetType3.Name)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicantId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

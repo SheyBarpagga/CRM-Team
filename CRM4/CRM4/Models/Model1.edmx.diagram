@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b858aee2aaa5479883355c9c019dec8e" Name="Diagram1">
+        <EntityTypeShape EntityType="CRM4Model.Applicant" Width="1.5" PointX="2.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRM4Model.Asset" Width="1.5" PointX="6.875" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRM4Model.AssetType" Width="1.5" PointX="0.625" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRM4Model.Renter" Width="1.5" PointX="4.625" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="CRM4Model.FK__Applicant__Askin__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CRM4Model.FK__Applicant__Askin__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CRM4Model.FK__Applicant__Askin__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="CRM4Model.FK__Applicant__Askin__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="CRM4Model.FK__Asset__AssetType__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="CRM4Model.FK__Asset__RenterId__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

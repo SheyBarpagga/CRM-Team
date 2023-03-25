@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRM4ModelStoreContainer" CdmEntityContainer="CRM4Entities">
+    <EntitySetMapping Name="Applicants">
+      <EntityTypeMapping TypeName="CRM4Model.Applicant">
+        <MappingFragment StoreEntitySet="Applicant">
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactingNumber" ColumnName="ContactingNumber" />
+          <ScalarProperty Name="SharingInfo" ColumnName="SharingInfo" />
+          <ScalarProperty Name="Income" ColumnName="Income" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="AskingAssetType1" ColumnName="AskingAssetType1" />
+          <ScalarProperty Name="AskingAssetType2" ColumnName="AskingAssetType2" />
+          <ScalarProperty Name="AskingAssetType3" ColumnName="AskingAssetType3" />
+          <ScalarProperty Name="AskingAssetType4" ColumnName="AskingAssetType4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="CRM4Model.Asset">
+        <MappingFragment StoreEntitySet="Asset">
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AssetTypeId" ColumnName="AssetTypeId" />
+          <ScalarProperty Name="RenterId" ColumnName="RenterId" />
+          <ScalarProperty Name="PlateNumber" ColumnName="PlateNumber" />
+          <ScalarProperty Name="SuiteNo" ColumnName="SuiteNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetTypes">
+      <EntityTypeMapping TypeName="CRM4Model.AssetType">
+        <MappingFragment StoreEntitySet="AssetType">
+          <ScalarProperty Name="AssetTypeId" ColumnName="AssetTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AvailableNumber" ColumnName="AvailableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Renters">
+      <EntityTypeMapping TypeName="CRM4Model.Renter">
+        <MappingFragment StoreEntitySet="Renter">
+          <ScalarProperty Name="RenterId" ColumnName="RenterId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactingNumber" ColumnName="ContactingNumber" />
+          <ScalarProperty Name="EmergencyContactingNumber" ColumnName="EmergencyContactingNumber" />
+          <ScalarProperty Name="Familydoctor" ColumnName="Familydoctor" />
+          <ScalarProperty Name="SharingInfo" ColumnName="SharingInfo" />
+          <ScalarProperty Name="Income" ColumnName="Income" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

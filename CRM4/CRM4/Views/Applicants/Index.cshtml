@@ -1,0 +1,107 @@
+﻿@model IEnumerable<CRM4.Models.Applicant>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactingNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SharingInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Income)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType1.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType2.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType3.Name)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactingNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SharingInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Income)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType1.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType2.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType3.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ApplicantId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ApplicantId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ApplicantId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
