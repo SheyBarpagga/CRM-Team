@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="ApplicantId" />
+    </Key>
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactingNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SharingInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Income" Type="Double" Nullable="false" />
+    <Property Name="Employer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AskingAssetType1" Type="Int32" Nullable="false" />
+    <Property Name="AskingAssetType2" Type="Int32" />
+    <Property Name="AskingAssetType3" Type="Int32" />
+    <Property Name="AskingAssetType4" Type="Int32" />
+    <NavigationProperty Name="AssetType" Relationship="Self.FK__Applicant__Askin__38996AB5" FromRole="Applicant" ToRole="AssetType" />
+    <NavigationProperty Name="AssetType1" Relationship="Self.FK__Applicant__Askin__398D8EEE" FromRole="Applicant" ToRole="AssetType" />
+    <NavigationProperty Name="AssetType2" Relationship="Self.FK__Applicant__Askin__3A81B327" FromRole="Applicant" ToRole="AssetType" />
+    <NavigationProperty Name="AssetType3" Relationship="Self.FK__Applicant__Askin__3B75D760" FromRole="Applicant" ToRole="AssetType" />
+  </EntityType>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="AssetId" />
+    </Key>
+    <Property Name="AssetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AssetTypeId" Type="Int32" Nullable="false" />
+    <Property Name="RenterId" Type="Int32" Nullable="false" />
+    <Property Name="PlateNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SuiteNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AssetType" Relationship="Self.FK__Asset__AssetType__403A8C7D" FromRole="Asset" ToRole="AssetType" />
+    <NavigationProperty Name="Renter" Relationship="Self.FK__Asset__RenterId__412EB0B6" FromRole="Asset" ToRole="Renter" />
+  </EntityType>
+  <EntityType Name="AssetType">
+    <Key>
+      <PropertyRef Name="AssetTypeId" />
+    </Key>
+    <Property Name="AssetTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AvailableNumber" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Applicants" Relationship="Self.FK__Applicant__Askin__38996AB5" FromRole="AssetType" ToRole="Applicant" />
+    <NavigationProperty Name="Applicants1" Relationship="Self.FK__Applicant__Askin__398D8EEE" FromRole="AssetType" ToRole="Applicant" />
+    <NavigationProperty Name="Applicants2" Relationship="Self.FK__Applicant__Askin__3A81B327" FromRole="AssetType" ToRole="Applicant" />
+    <NavigationProperty Name="Applicants3" Relationship="Self.FK__Applicant__Askin__3B75D760" FromRole="AssetType" ToRole="Applicant" />
+    <NavigationProperty Name="Assets" Relationship="Self.FK__Asset__AssetType__403A8C7D" FromRole="AssetType" ToRole="Asset" />
+  </EntityType>
+  <EntityType Name="Renter">
+    <Key>
+      <PropertyRef Name="RenterId" />
+    </Key>
+    <Property Name="RenterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactingNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmergencyContactingNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Familydoctor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SharingInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Income" Type="Double" Nullable="false" />
+    <Property Name="Employer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Assets" Relationship="Self.FK__Asset__RenterId__412EB0B6" FromRole="Renter" ToRole="Asset" />
+  </EntityType>
+  <Association Name="FK__Applicant__Askin__38996AB5">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="1" />
+    <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="AssetTypeId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="AskingAssetType1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicant__Askin__398D8EEE">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="AssetTypeId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="AskingAssetType2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicant__Askin__3A81B327">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="AssetTypeId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="AskingAssetType3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicant__Askin__3B75D760">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="AssetTypeId" />
+      </Principal>
+      <Dependent Role="Applicant">
+        <PropertyRef Name="AskingAssetType4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asset__AssetType__403A8C7D">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="1" />
+    <End Role="Asset" Type="Self.Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="AssetTypeId" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asset__RenterId__412EB0B6">
+    <End Role="Renter" Type="Self.Renter" Multiplicity="1" />
+    <End Role="Asset" Type="Self.Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Renter">
+        <PropertyRef Name="RenterId" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="RenterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CRMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applicants" EntityType="Self.Applicant" />
+    <EntitySet Name="Assets" EntityType="Self.Asset" />
+    <EntitySet Name="AssetTypes" EntityType="Self.AssetType" />
+    <EntitySet Name="Renters" EntityType="Self.Renter" />
+    <AssociationSet Name="FK__Applicant__Askin__38996AB5" Association="Self.FK__Applicant__Askin__38996AB5">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Applicant" EntitySet="Applicants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicant__Askin__398D8EEE" Association="Self.FK__Applicant__Askin__398D8EEE">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Applicant" EntitySet="Applicants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicant__Askin__3A81B327" Association="Self.FK__Applicant__Askin__3A81B327">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Applicant" EntitySet="Applicants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicant__Askin__3B75D760" Association="Self.FK__Applicant__Askin__3B75D760">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Applicant" EntitySet="Applicants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asset__AssetType__403A8C7D" Association="Self.FK__Asset__AssetType__403A8C7D">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Asset" EntitySet="Assets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asset__RenterId__412EB0B6" Association="Self.FK__Asset__RenterId__412EB0B6">
+      <End Role="Renter" EntitySet="Renters" />
+      <End Role="Asset" EntitySet="Assets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
